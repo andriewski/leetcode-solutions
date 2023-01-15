@@ -6,7 +6,7 @@ package by.mark.leetcode;
  */
 class Solution2 {
 
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int sum = l1.val + l2.val;
         int currentNodeValue = sum % 10;
         int nextRankValueToAdd = sum / 10;
@@ -16,7 +16,7 @@ class Solution2 {
         return new ListNode(currentNodeValue, nextNode);
     }
 
-    public static ListNode addTwoNumbers(int valueToAdd, ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(int valueToAdd, ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null && valueToAdd == 0) {
             return null;
         } else if (l1 == null && l2 == null) {
